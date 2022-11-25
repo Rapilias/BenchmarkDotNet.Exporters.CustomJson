@@ -22,7 +22,9 @@ jobs:
         run: dotnet restore
       - name: Build
         run: dotnet build --no-restore
+      - name: Test Debug
+        run: dotnet test --no-build --verbosity normal --configuration Debug
+      - name: Test Release
+        run: dotnet test --no-build --verbosity normal --configuration Release
       - name: Lint
         run: dotnet format --no-restore
-      - name: Test
-        run: dotnet test --no-build --verbosity normal
