@@ -30,7 +30,7 @@ namespace BenchmarkDotNet.Exporters.CustomJson
 
     public class ChronometerFrequency
     {
-        public int Hertz { get; set; }
+        public double Hertz { get; set; }
     }
 
     public class ConfidenceInterval
